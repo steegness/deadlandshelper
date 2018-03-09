@@ -1,0 +1,133 @@
+body {
+  margin: 2em;
+}
+
+#ChipTableSection,
+#CardTableSection {
+  margin-bottom: 1.5em;
+}
+
+.chip {
+  margin:.25em;
+  font-size:1.2em;
+  position:relative;
+  display:inline-block;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  width:3em;
+  height:3em;
+  background:#555;
+  border-radius:50%;
+  position:relative;
+  border:.25em dashed white;
+  transition:all .5s ease;
+  backface-visibility:hidden;
+  transform: perspective(3000px) rotateX(55deg) rotateZ(-40deg);
+  box-shadow:
+    -1px 1px 0px #555,
+    -2px 2px 0px #555,
+    -3px 3px 0px #555,
+    -4px 4px 0px #555,
+    -5px 5px 0px #555,
+    -6px 6px 10px #555;
+  text-indent: -9999px;
+}
+
+.chip-red{
+  background:#DD4631;
+}
+
+.chip-blue{
+  background:#317DDD;
+}
+
+.chip-white {
+  background: gainsboro;
+}
+
+.chip-legend {
+  background: goldenrod;
+}
+
+.chip-black {
+  background: black;
+}
+
+.chip-silver {
+  background: gray;
+}
+
+.chip:hover{
+  transform: perspective(3000px) rotateX(55deg) rotateZ(-40deg) translateZ(.5em);
+}
+
+#reshuffle {
+  font-size: .4em;
+}
+
+.NameBox {
+  float: left;
+  text-align: center;
+  margin-top: 2em;
+  min-width: 10em
+}
+
+
+
+.UserRow-Chips {
+  float: none;
+  clear: both;
+  max-height: 3.5em;
+}
+
+#CardTableSection {
+  font-size: 14px;
+}
+
+span.CardId {
+  top: 75%;
+  left: 65%;
+  position: absolute;
+  font-size: .8em;
+}
+
+#GiveThings {
+  position: fixed;
+  right: 3em;
+  top: 3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.spent {
+  position:relative;
+  display:inline-block;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  width:4em;
+  height:4em;
+  border-radius:50%;
+  position:relative;
+  left: .5em;
+  bottom: .75em;
+  margin: .25em;
+}
+
+.spent:after{
+  content: '\d7';
+  font-size: 5em;
+  line-height: 1em;
+  opacity: 0.8;
+  color:red;
+  text-align: center;
+}
