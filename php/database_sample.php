@@ -1,5 +1,6 @@
 <?php
-$db = mysqli_connect("server", "username", "password", "databasename");
+//copy this file, change these values, and rename the copy as "database.php".
+$db = mysqli_connect("server", "username", "password", "databasename");  
 
 function sql_getUserList() {
 	$sql = "
