@@ -1,5 +1,5 @@
 <?php
-$db = mysqli_connect("servier", "username", "password", "databasename");
+$db = mysqli_connect("server", "username", "password", "databasename");
 
 function sql_getUserList() {
 	$sql = "
