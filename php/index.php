@@ -29,6 +29,16 @@ require_once("database.php");
       <div id="UserDropDownSection"></div>
       <span id="giveChipLink" onclick="giveThisUserAChip();" class="btn btn-primary">Random Chip</span><br/>
       <span id="giveCardLink" onclick="giveThisUserACard();" class="btn btn-success">Random Card</span>
+      <div class="dropdown">
+        <button class="btn btn-info dropdown-toggle" type="button" id="giveSpecificChipButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Specific Chip
+        </button>
+        <div class="dropdown-menu" aria-labelledby="giveSpecificChipButton">
+          <span class="dropdown-item" onclick="giveThisUserASpecificChip('white');">White</span>
+          <span class="dropdown-item" onclick="giveThisUserASpecificChip('red');">Red</span>
+          <span class="dropdown-item" onclick="giveThisUserASpecificChip('blue');">Blue</span>
+        </div>
+      </div>
       <div id="giveChipMessage" display="none"></div>
       <div id="spendChipMessage" display="none"></div>
       <div id="giveCardMessage" display="none"></div>

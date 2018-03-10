@@ -71,6 +71,18 @@ WHERE id = @ruc;
   return $sql;
 }
 
+function sql_assignSpecificChipToUser($idUser, $color) {
+	$sql = "
+SET @suc := specificUnownedColoredChip(\"" . $color . "\");
+UPDATE chips
+SET 
+  idOwner = " . $idUser . ", 
+  lastUpdated = CURRENT_TIMESTAMP
+WHERE id = @suc;
+	";
+	return $sql;
+}
+
 function sql_assignRandomCardToUser($idUser) {
   $sql = "
 SET @ruc := randomUnownedCard();
@@ -112,3 +124,4 @@ SET idOwner = NULL
   ";
   return $sql;
 }
+

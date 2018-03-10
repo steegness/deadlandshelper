@@ -44,6 +44,12 @@ function giveThisUserAChip() {
   getData("api/addThings.php?thing=chips&idUser=" + dd.options[dd.selectedIndex].value, giveChipFeedback);
 }
 
+function giveThisUserASpecificChip(color) {
+  var dd = document.getElementById("userDropDown");
+  getData("api/addThings.php?thing=chips&idUser=" + dd.options[dd.selectedIndex].value, giveChipFeedback) + "&color=" + color;
+}
+
+
 function giveChipFeedback(incomingString) {
   giveFeedback(incomingString, "giveChipMessage", loadChipTable);
 }

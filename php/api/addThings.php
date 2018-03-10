@@ -18,7 +18,11 @@ switch (requestVar("thing")) {
     echo(addWhatever(sql_assignRandomCardToUser(requestVar("idUser"))));
     break;
   case "chips":
-    echo(addWhatever(sql_assignRandomChipToUser(requestVar("idUser"))));
+    if (requestVar("color")) {
+      echo(addWhatever(sql_assignSpecificChipToUser(requestVar("idUser"), requestVar("color"))));
+    } else {
+      echo(addWhatever(sql_assignRandomChipToUser(requestVar("idUser"))));
+    }
     break;
   default:
     echo("FAILURE");

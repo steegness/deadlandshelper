@@ -63,6 +63,17 @@ ORDER BY
 LIMIT 1
 )$$
 
+CREATE DEFINER=`root`@`localhost` FUNCTION `specificUnownedColoredChip`(`desiredColor` VARCHAR(6)) RETURNS int(11)
+    READS SQL DATA
+RETURN 
+(
+SELECT chips.id
+FROM chips
+WHERE chips.idOwner IS NULL
+and chips.color = desiredColor
+LIMIT 1
+)$$
+
 DELIMITER ;
 
 -- --------------------------------------------------------
