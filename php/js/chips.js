@@ -46,7 +46,7 @@ function giveThisUserAChip() {
 
 function giveThisUserASpecificChip(color) {
   var dd = document.getElementById("userDropDown");
-  getData("api/addThings.php?thing=chips&idUser=" + dd.options[dd.selectedIndex].value, giveChipFeedback) + "&color=" + color;
+  getData("api/addThings.php?thing=chips&idUser=" + dd.options[dd.selectedIndex].value + "&color=" + color, giveChipFeedback);
 }
 
 
